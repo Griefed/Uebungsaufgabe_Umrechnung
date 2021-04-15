@@ -104,7 +104,7 @@ public class Main {
     /**
      * Fordert den Benutzer auf die größe der zuvor gewählten Einheit zu bestimmen. Der Benutzer wird solange zur Eingabe aufgefordert, solange die Eingabe keiner Zahl entspricht.
      * Ist die Eingabe eine Zahl, wird sie in ein Double konvertiert und an main zurückgegeben.
-     * @param userChoice Die zuvor ausgewählte Einhein.
+     * @param userChoice Die zuvor ausgewählte Einheit.
      * @return Das vom Benutzer eingegebene Double, mit welchem dann die Umrechnung ausgeführt wird.
      */
     private static Double getSize(Integer userChoice) {
@@ -124,8 +124,7 @@ public class Main {
 
         do {
 
-            System.out.print(String.format(
-                    "Bitte Anzahl %s eingeben: ",
+            System.out.print(String.format("Bitte Anzahl %s eingeben: ",
                     type.get(userChoice - 1)));
 
             userInput = input.nextLine();
@@ -145,6 +144,11 @@ public class Main {
         return result;
     }
 
+    /**
+     * Wenn Bit ausgewählt wurde, in alle anderen groessen konvertieren.
+     * @param size Groesse der ausgewählten Einheit.
+     * @return Ausgabe der Konvertierten Eingabe.
+     */
     private static String convertBit(Double size) {
 
         return String.format(
@@ -162,6 +166,12 @@ public class Main {
                 size / 8 / 1024 / 1024 / 1024 / 1024
         );
     }
+
+    /**
+     * Wenn Byte ausgewählt wurde, in alle anderen groessen konvertieren.
+     * @param size Groesse der ausgewählten Einheit.
+     * @return Ausgabe der Konvertierten Eingabe.
+     */
     private static String convertByte(Double size) {
 
         return String.format(
@@ -179,6 +189,12 @@ public class Main {
                 size / 1024 / 1024 / 1024 / 1024
         );
     }
+
+    /**
+     * Wenn Kibibyte ausgewählt wurde, in alle anderen groessen konvertieren.
+     * @param size Groesse der ausgewählten Einheit.
+     * @return Ausgabe der Konvertierten Eingabe.
+     */
     private static String convertKibibyte(Double size) {
 
         return String.format(
@@ -196,6 +212,12 @@ public class Main {
                 size / 1024 / 1024 / 1024
         );
     }
+
+    /**
+     * Wenn Mebibyte ausgewählt wurde, in alle anderen groessen konvertieren.
+     * @param size Groesse der ausgewählten Einheit.
+     * @return Ausgabe der Konvertierten Eingabe.
+     */
     private static String convertMebibyte(Double size) {
 
         return String.format(
@@ -213,6 +235,12 @@ public class Main {
                 size / 1024 / 1024
         );
     }
+
+    /**
+     * Wenn Gibibyte ausgewählt wurde, in alle anderen groessen konvertieren.
+     * @param size Groesse der ausgewählten Einheit.
+     * @return Ausgabe der Konvertierten Eingabe.
+     */
     private static String convertGibibyte(Double size) {
 
         return String.format(
@@ -230,6 +258,12 @@ public class Main {
                 size / 1024
         );
     }
+
+    /**
+     * Wenn Tebibyte ausgewählt wurde, in alle anderen groessen konvertieren.
+     * @param size Groesse der ausgewählten Einheit.
+     * @return Ausgabe der Konvertierten Eingabe.
+     */
     private static String convertTebibyte(Double size) {
 
         return String.format(
