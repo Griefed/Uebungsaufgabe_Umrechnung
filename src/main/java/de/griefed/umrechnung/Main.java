@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String result;
         Integer choice;
         Double size;
 
@@ -29,34 +28,33 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    result = convertBit(size);
+                    System.out.println(convertBit(size));
 
                     break;
                 case 2:
-                    result = convertByte(size);
+                    System.out.println(convertByte(size));
 
                     break;
                 case 3:
-                    result = convertKibibyte(size);
+                    System.out.println(convertKibibyte(size));
 
                     break;
                 case 4:
-                    result = convertMebibyte(size);
+                    System.out.println(convertMebibyte(size));
 
                     break;
                 case 5:
-                    result = convertGibibyte(size);
+                    System.out.println(convertGibibyte(size));
 
                     break;
                 case 6:
-                    result = convertTebibyte(size);
+                    System.out.println(convertTebibyte(size));
 
                     break;
                 default:
                     throw new IllegalStateException("Unexpected value: " + choice);
             }
 
-            System.out.println(result);
             System.out.println("Moechten Sie eine weitere Berechnung durchfuehren? \"N\" eingeben, um zu beenden.");
             System.out.print("Antwort: ");
         } while(!input.nextLine().matches("[Nn]"));
