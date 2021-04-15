@@ -130,7 +130,7 @@ public class Main {
 
             userInput = input.nextLine();
 
-            if (!userInput.matches("[0-9]*")) {
+            if (userInput.matches("[0-9]*")) {
                 if (Integer.parseInt(userInput) > 0) {
 
                     result = Double.parseDouble(userInput);
@@ -146,7 +146,8 @@ public class Main {
     }
 
     private static String convertBit(Double size) {
-        String result = String.format(
+
+        return String.format(
                 "Bit:       %f\n" +
                         "Byte:      %f\n" +
                         "Kibibyte:  %f\n" +
@@ -160,11 +161,10 @@ public class Main {
                 size / 8 / 1024 / 1024 / 1024,
                 size / 8 / 1024 / 1024 / 1024 / 1024
         );
-
-        return result;
     }
     private static String convertByte(Double size) {
-        String result = String.format(
+
+        return String.format(
                 "Bit:       %f\n" +
                         "Byte:      %f\n" +
                         "Kibibyte:  %f\n" +
@@ -178,11 +178,10 @@ public class Main {
                 size / 1024 / 1024 / 1024,
                 size / 1024 / 1024 / 1024 / 1024
         );
-
-        return result;
     }
     private static String convertKibibyte(Double size) {
-        String result = String.format(
+
+        return String.format(
                 "Bit:       %f\n" +
                         "Byte:      %f\n" +
                         "Kibibyte:  %f\n" +
@@ -196,11 +195,10 @@ public class Main {
                 size / 1024 / 1024,
                 size / 1024 / 1024 / 1024
         );
-
-        return result;
     }
     private static String convertMebibyte(Double size) {
-        String result = String.format(
+
+        return String.format(
                 "Bit:       %f\n" +
                         "Byte:      %f\n" +
                         "Kibibyte:  %f\n" +
@@ -214,11 +212,10 @@ public class Main {
                 size / 1024,
                 size / 1024 / 1024
         );
-
-        return result;
     }
     private static String convertGibibyte(Double size) {
-        String result = String.format(
+
+        return String.format(
                 "Bit:       %f\n" +
                         "Byte:      %f\n" +
                         "Kibibyte:  %f\n" +
@@ -232,11 +229,10 @@ public class Main {
                 size,
                 size / 1024
         );
-
-        return result;
     }
     private static String convertTebibyte(Double size) {
-        String result = String.format(
+
+        return String.format(
                 "Bit:       %f\n" +
                         "Byte:      %f\n" +
                         "Kibibyte:  %f\n" +
@@ -250,7 +246,5 @@ public class Main {
                 size * 1024,
                 size
         );
-
-        return result;
     }
 }
