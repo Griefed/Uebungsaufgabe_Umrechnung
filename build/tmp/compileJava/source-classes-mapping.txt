@@ -1,2 +1,2 @@
-de/griefed/skripting/Main.java
- de.griefed.skripting.Main
+de/griefed/umrechnung/Main.java
+ de.griefed.umrechnung.Main
