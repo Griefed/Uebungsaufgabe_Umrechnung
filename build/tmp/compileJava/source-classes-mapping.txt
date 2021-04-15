@@ -1,0 +1,2 @@
+de/griefed/skripting/Main.java
+ de.griefed.skripting.Main
