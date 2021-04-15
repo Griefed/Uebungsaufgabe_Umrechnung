@@ -131,13 +131,14 @@ public class Main {
             userInput = input.nextLine();
 
             if (!userInput.matches("[0-9]*")) {
+                if (Integer.parseInt(userInput) > 0) {
 
-                System.out.println("Sie muessen eine Zahl eingeben!");
+                    result = Double.parseDouble(userInput);
+                    isNumber = true;
 
-            } else {
-
-                result = Double.parseDouble(userInput);
-                isNumber = true;
+                } else {
+                    System.out.println("Sie muessen eine Zahl eingeben, die groesser als 0 ist!");
+                }
             }
         } while (!isNumber);
 
